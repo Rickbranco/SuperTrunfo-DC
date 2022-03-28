@@ -518,6 +518,7 @@ function jogar() {
   document.getElementById("btnJogar").disabled = true;
   document.getElementById("btnNovoJogo").disabled = false;
   pontos.innerHTML = `Jogador possui ${meuBaralho.length} cartas | Máquina possui ${baralho.length} cartas`;
+  document.getElementById("btnZerar").disabled = false;
 }
 
 function novoJogo() {
@@ -580,3 +581,8 @@ function hidePopup(id) {
 }
 
 // Não consegui Zera o placar e Reiniciar o jogo
+
+var btn = document.querySelector("btnZerar");
+btn.addEventListener("click", function () {
+  location.reload();
+});
